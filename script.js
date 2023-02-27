@@ -80,7 +80,7 @@ function resetGame() {
   introductionElement.style.opacity = 1;
   perfectElement.style.opacity = 0;
   restartButton.style.display = "none";
-  scoreElement.innerText = score;
+  scoreElement.innerText = "Starting points: " + score;
 
   // The first platform is always the same
   // x + w has to match paddingX
@@ -208,7 +208,7 @@ function animate(timestamp) {
         if (nextPlatform) {
           // Increase score
           score += perfectHit ? 2 : 1;
-          scoreElement.innerText = score;
+          scoreElement.innerText = "current points: " + score;
 
           if (perfectHit) {
             perfectElement.style.opacity = 1;
